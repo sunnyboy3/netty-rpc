@@ -23,7 +23,7 @@
     <artifactId>seata-parent</artifactId>
     <version>${revision}</version>
     <modules>
-<!--        <module>all</module>-->
+        <module>server</module>
     </modules>
     <packaging>pom</packaging>
 
