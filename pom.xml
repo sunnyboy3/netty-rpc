@@ -24,6 +24,9 @@
     <version>${revision}</version>
     <modules>
         <module>server</module>
+        <module>config</module>
+        <module>common</module>
+        <module>discovery</module>
     </modules>
     <packaging>pom</packaging>
 
