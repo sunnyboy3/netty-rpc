@@ -2,45 +2,32 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>io.seata</groupId>
-    <artifactId>seata-parent</artifactId>
-    <version>${revision}</version>
+    <artifactId>com.gk.discovery</artifactId>
+    <version>1.4.1</version>
   </parent>
-  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.seata</groupId>
+  <artifactId>com.gk.discovery.core</artifactId>
+  <version>1.4.1</version>
 
-  <groupId>com.gk.rpc</groupId>
-  <artifactId>server</artifactId>
-  <packaging>jar</packaging>
-  <version>${revision}</version>
-
-  <name>server</name>
+  <name>com.gk.discovery.core</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>io.seata</groupId>
-      <artifactId>com.gk.config</artifactId>
-      <version>1.4.1</version>
-    </dependency>
-    <dependency>
-      <groupId>io.seata</groupId>
-      <artifactId>com.gk.discovery.all</artifactId>
-      <version>1.4.1</version>
-      <exclusions>
-        <exclusion>
-          <groupId>io.seata</groupId>
-          <artifactId>com.gk.config</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>com.beust</groupId>
-      <artifactId>jcommander</artifactId>
-      <version>1.72</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
