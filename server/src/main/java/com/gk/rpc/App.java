@@ -3,6 +3,7 @@ package com.gk.rpc;
 import com.gk.rpc.constants.ConfigurationKeys;
 import com.gk.rpc.netty.NettyRemotingServer;
 import com.gk.rpc.netty.NettyServerConfig;
+import com.gk.rpc.session.SessionHolder;
 import com.gk.rpc.utils.PortHelper;
 import io.seata.XID;
 import io.seata.thread.NamedThreadFactory;
@@ -35,6 +36,8 @@ public class App
         //server port
         nettyRemotingServer.setListenPort(parameterParser.getPort());
         UUIDGenerator.init(parameterParser.getServerNode());
+        //序列化session
+        SessionHolder.init(parameterParser.getStoreMode());
 
         if (NetUtil.isValidIp(parameterParser.getHost(), false)) {
             XID.setIpAddress(parameterParser.getHost());
